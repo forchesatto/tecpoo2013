@@ -13,7 +13,14 @@ public class ExemploConta {
         conta.setNumero(123456);
         conta.setLimite(1000.0);
         conta.deposita(100.00);
-        conta.saca(39.00);
+        
+        if(!conta.saca(110.00)){
+            System.out.println("Sem saldo para 110");
+        }
+        
+        if(conta.saca(90.00)){
+            System.out.println("Conseguiu sacar 90");
+        }
         
         System.out.println(conta.getCliente() +" - "+conta.getNumero());
         System.out.println("Saldo conta:"+conta.verificaSaldo());
