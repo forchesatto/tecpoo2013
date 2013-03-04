@@ -1,7 +1,7 @@
 package exemploconta;
 
 /**
- *
+ * Teste proxy
  * @author andreforchesatto
  */
 class Cliente {
