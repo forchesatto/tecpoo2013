@@ -22,12 +22,12 @@ public class Conta {
         saldo = saldo + valor;
     }
     
-    public void saca(Double valor){
+    public boolean saca(Double valor){
         if(saldo >= valor){
             saldo = saldo - valor;
+            return true;
         } else {
-            //TODO: sugerir solução 
-            System.out.println("Saldo insuficiente");
+            return false;
         }
     }
 
