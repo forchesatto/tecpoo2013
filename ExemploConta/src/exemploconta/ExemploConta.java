@@ -8,19 +8,28 @@ public class ExemploConta {
 
     public static void main(String[] args) {
         Conta conta = new Conta();
-        conta.cliente ="André";
-        conta.agencia="Xanxerê";
-        conta.numero = 123456;
-        conta.limite = 1000.0;
+        conta.setCliente("André");
+        conta.setAgencia("Xanxerê");
+        conta.setNumero(123456);
+        conta.setLimite(1000.0);
+        conta.deposita(100.00);
+        conta.saca(39.00);
         
-        System.out.println(conta.cliente +" - "+conta.numero);
+        System.out.println(conta.getCliente() +" - "+conta.getNumero());
+        System.out.println("Saldo conta:"+conta.verificaSaldo());
         
         Conta conta2 = new Conta();
-        conta2.cliente ="Pedro";
-        conta2.agencia="Xaxim";
-        conta2.numero = 1256;
-        conta2.limite = 1200.0;
+        conta2.setCliente("Pedro");
+        conta2.setAgencia("Xaxim");
+        conta2.setNumero(1256);
+        conta2.setLimite(1200.0);
+        System.out.println(conta2.getCliente() +" - "+conta2.getNumero());
         
-        System.out.println(conta2.cliente +" - "+conta2.numero);
+        Cliente cliente = new Cliente();
+        cliente.nome="José";
+        cliente.cpf="888899999";
+        cliente.cidade="Xanxerê";
+        
+        System.out.println(cliente.nome +" - "+cliente.cpf);
     }
 }
