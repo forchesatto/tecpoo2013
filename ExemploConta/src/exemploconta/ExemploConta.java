@@ -22,6 +22,11 @@ public class ExemploConta {
             System.out.println("Conseguiu sacar 90");
         }
         
+        if(!conta.saca(1200.00)){
+            System.out.println("Não consegiu sacar 1200");
+        }
+        
+        
         System.out.println(conta.getCliente() +" - "+conta.getNumero());
         System.out.println("Saldo conta:"+conta.verificaSaldo());
         

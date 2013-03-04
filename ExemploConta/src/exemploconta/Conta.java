@@ -11,7 +11,7 @@ public class Conta {
     private String agencia;
     private String cliente;
     private Date dataAbertura;
-    private Double limite;
+    private Double limite = 0.0;
     private Double saldo = 0.0;
     
     public Double verificaSaldo(){
@@ -22,13 +22,20 @@ public class Conta {
         saldo = saldo + valor;
     }
     
-    public boolean saca(Double valor){
-        if(saldo >= valor){
-            saldo = saldo - valor;
+    public boolean possuiSaldoSuficiente(Double valor){
+        Double saldoTotal = saldo + limite;
+        if(saldoTotal >= valor){
             return true;
-        } else {
-            return false;
         }
+        return false;
+    }
+    
+    public boolean saca(Double valor){
+        boolean possuiSaldoSuficiente = possuiSaldoSuficiente(valor);
+        if(possuiSaldoSuficiente){
+            saldo = saldo - valor;
+        }
+        return possuiSaldoSuficiente;
     }
 
     public Integer getNumero() {
