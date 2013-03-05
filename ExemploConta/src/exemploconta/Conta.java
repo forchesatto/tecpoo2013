@@ -14,6 +14,15 @@ public class Conta {
     private Double limite = 0.0;
     private Double saldo = 0.0;
     
+    
+    public boolean transferir(Double valor, Conta conta2){
+        if(saca(valor)){
+            conta2.deposita(valor);
+            return true;
+        }
+        return false;
+    }
+    
     public Double verificaSaldo(){
         return saldo;
     }

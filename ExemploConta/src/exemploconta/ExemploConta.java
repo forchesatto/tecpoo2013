@@ -35,7 +35,13 @@ public class ExemploConta {
         conta2.setAgencia("Xaxim");
         conta2.setNumero(1256);
         conta2.setLimite(1200.0);
-        System.out.println(conta2.getCliente() +" - "+conta2.getNumero());
+        
+        System.out.println(conta2.getNumero()+"Saldo: "+conta2.verificaSaldo());
+        
+        System.out.println("-----Transferindo dinheiro conta 1 para conta 2----");
+        conta.transferir(300.0, conta2);
+        
+        System.out.println(conta2.getNumero()+"Saldo: "+conta2.verificaSaldo());
         
         Cliente cliente = new Cliente();
         cliente.nome="José";
