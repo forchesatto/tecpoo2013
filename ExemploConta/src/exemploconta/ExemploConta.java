@@ -1,5 +1,7 @@
 package exemploconta;
 
+import java.util.Date;
+
 /**
  *
  * @author andreforchesatto
@@ -7,11 +9,10 @@ package exemploconta;
 public class ExemploConta {
 
     public static void main(String[] args) {
-        Conta conta = new Conta();
-        conta.setCliente("André");
-        conta.setAgencia("Xanxerê");
-        conta.setNumero(123456);
-        conta.setLimite(1000.0);
+        Conta conta = new Conta(123456, 
+                "Xanxerê", "André", 
+                new Date(), 1000.0); //Construtor com atributos
+        
         conta.deposita(100.00);
         
         if(!conta.saca(110.00)){
@@ -30,7 +31,7 @@ public class ExemploConta {
         System.out.println(conta.getCliente() +" - "+conta.getNumero());
         System.out.println("Saldo conta:"+conta.verificaSaldo());
         
-        Conta conta2 = new Conta();
+        Conta conta2 = new Conta(); //Usando construtor vazio
         conta2.setCliente("Pedro");
         conta2.setAgencia("Xaxim");
         conta2.setNumero(1256);

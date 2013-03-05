@@ -13,7 +13,28 @@ public class Conta {
     private Date dataAbertura;
     private Double limite = 0.0;
     private Double saldo = 0.0;
+
+    //Construtor vazio
+    public Conta(){
+        
+    }
     
+    //Construtor com atributos
+    public Conta(Integer numero, String agencia, 
+            String cliente, Date dataAbertura, Double limite) {
+        this.setNumero(numero);
+        this.agencia = agencia;
+        this.cliente = cliente;
+        this.dataAbertura = dataAbertura;
+        this.limite = limite;
+    }
+    
+    public boolean validaNumeroConta(Integer numero){
+        if(numero >= 1 && numero <= 9999){
+            return true;
+        }
+        return false;
+    }
     
     public boolean transferir(Double valor, Conta conta2){
         if(saca(valor)){
@@ -52,7 +73,9 @@ public class Conta {
     }
 
     public void setNumero(Integer numero) {
-        this.numero = numero;
+        if(validaNumeroConta(numero)){
+            this.numero = numero;
+        }
     }
 
     public String getAgencia() {
