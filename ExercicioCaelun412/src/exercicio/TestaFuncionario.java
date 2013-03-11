@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package exercicio;
 
 import exercicio.Funcionario;
@@ -26,20 +22,23 @@ public class TestaFuncionario {
         f1.dataEntrada = data;
 
         f1.demite();
-
+        System.out.println("===Dados funcionario 1====");
         f1.mostra();
-
+        System.out.println("===Fim Dados funcionario 1====");
+        
         Funcionario f2 = new Funcionario();
-        f1.nome = "Danilo";
-        f1.salario = 100;
-        f1.dataEntrada = data;
-
-        Funcionario f3 = new Funcionario();
         f2.nome = "Danilo";
         f2.salario = 100;
         f2.dataEntrada = data;
 
+        Funcionario f3 = new Funcionario();
+        f3.nome = "Danilo";
+        f3.salario = 100;
+        f3.dataEntrada = data;
+        
+        System.out.println("===Dados funcionario 2====");
         f2.mostra();
+        System.out.println("===Fim Dados funcionario 2====");
         
         if (f2 == f3) {
             System.out.println("iguais");
