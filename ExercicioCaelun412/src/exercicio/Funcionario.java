@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package exercicio;
 
 /**
@@ -13,7 +9,7 @@ public class Funcionario {
     String nome;
     String departamento;
     double salario;
-    String dataEntrada;
+    Data dataEntrada;
     String rg;
     boolean estaNaEmpresa = true;
     
@@ -35,6 +31,10 @@ public class Funcionario {
       System.out.println("RG: "+this.rg);
       System.out.println("Ganho anual: "+this.calculaGanhoAnual());
       System.out.println("Demitido?: "+this.estaNaEmpresa);
+      
+      System.out.println("Data dia: "+this.dataEntrada.dia);
+      System.out.println("Data mes: "+this.dataEntrada.mes);
+      System.out.println("Data ano: "+this.dataEntrada.ano);
   }
   
   
