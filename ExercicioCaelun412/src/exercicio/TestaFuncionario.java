@@ -30,16 +30,20 @@ public class TestaFuncionario {
         f2.nome = "Danilo";
         f2.salario = 100;
         f2.dataEntrada = data;
+        System.out.println("===Dados funcionario 2====");
+        f2.mostra();
+        System.out.println("===Fim Dados funcionario 2====");
 
         Funcionario f3 = new Funcionario();
         f3.nome = "Danilo";
         f3.salario = 100;
         f3.dataEntrada = data;
+        System.out.println("===Dados funcionario 3====");
+        f3.mostra();
+        System.out.println("===Fim Dados funcionario 3====");
         
-        System.out.println("===Dados funcionario 2====");
-        f2.mostra();
-        System.out.println("===Fim Dados funcionario 2====");
         
+        System.out.println("====Comparando funcionario 2 com 3====");
         if (f2 == f3) {
             System.out.println("iguais");
         } else {
