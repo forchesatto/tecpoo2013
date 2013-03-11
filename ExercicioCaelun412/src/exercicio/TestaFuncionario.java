@@ -25,12 +25,9 @@ public class TestaFuncionario {
         f1.recebeAumento(50);
         f1.dataEntrada = data;
 
-        System.out.println("salario atual:" + f1.salario);
-        System.out.println("ganho anual:" + f1.calculaGanhoAnual());
-
         f1.demite();
 
-        System.out.println("Funcionario demitido?" + f1.estaNaEmpresa);
+        f1.mostra();
 
         Funcionario f2 = new Funcionario();
         f1.nome = "Danilo";
@@ -42,6 +39,8 @@ public class TestaFuncionario {
         f2.salario = 100;
         f2.dataEntrada = data;
 
+        f2.mostra();
+        
         if (f2 == f3) {
             System.out.println("iguais");
         } else {

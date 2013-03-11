@@ -35,6 +35,8 @@ public class Funcionario {
       System.out.println("Data dia: "+this.dataEntrada.dia);
       System.out.println("Data mes: "+this.dataEntrada.mes);
       System.out.println("Data ano: "+this.dataEntrada.ano);
+      
+      System.out.println("Data formatada: "+this.dataEntrada.formatada());
   }
   
   
