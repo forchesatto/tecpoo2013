@@ -29,5 +29,13 @@ public class Funcionario {
       estaNaEmpresa = false;
   }
   
+  void mostra(){
+      System.out.println("Nome: "+this.nome);
+      System.out.println("Departamento: "+this.departamento);
+      System.out.println("RG: "+this.rg);
+      System.out.println("Ganho anual: "+this.calculaGanhoAnual());
+      System.out.println("Demitido?: "+this.estaNaEmpresa);
+  }
+  
   
 }
