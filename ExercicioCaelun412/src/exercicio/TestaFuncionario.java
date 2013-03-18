@@ -16,10 +16,10 @@ public class TestaFuncionario {
         
         Funcionario f1 = new Funcionario();
 
-        f1.nome = "Hugo";
-        f1.salario = 100;
+        f1.setNome("Hugo");
+        f1.setSalario(100);
         f1.recebeAumento(50);
-        f1.dataEntrada = data;
+        f1.setDataEntrada(data);
 
         f1.demite();
         System.out.println("===Dados funcionario 1====");
@@ -27,17 +27,17 @@ public class TestaFuncionario {
         System.out.println("===Fim Dados funcionario 1====");
         
         Funcionario f2 = new Funcionario();
-        f2.nome = "Danilo";
-        f2.salario = 100;
-        f2.dataEntrada = data;
+        f2.setNome("Danilo");
+        f2.setSalario(100);
+        f2.setDataEntrada(data);
         System.out.println("===Dados funcionario 2====");
         f2.mostra();
         System.out.println("===Fim Dados funcionario 2====");
 
         Funcionario f3 = new Funcionario();
-        f3.nome = "Danilo";
-        f3.salario = 100;
-        f3.dataEntrada = data;
+        f3.setNome("Danilo");
+        f3.setSalario(100);
+        f3.setDataEntrada(data);
         System.out.println("===Dados funcionario 3====");
         f3.mostra();
         System.out.println("===Fim Dados funcionario 3====");

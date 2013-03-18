@@ -6,26 +6,26 @@ package exercicio;
  */
 public class Funcionario {
     
-    String nome;
-    String departamento;
-    double salario;
-    Data dataEntrada;
-    String rg;
-    boolean estaNaEmpresa = true;
-    
-  void recebeAumento(double aumento) {
+  private String nome;
+  private String departamento;
+  private double salario;
+  private Data dataEntrada;
+  private String rg;
+  private boolean estaNaEmpresa = true;
+  
+  public void recebeAumento(double aumento) {
     salario += aumento;
   }
   
-  double calculaGanhoAnual() {
+  public double calculaGanhoAnual() {
     return salario * 12;
   }
   
-  void demite(){
+  public void demite(){
       estaNaEmpresa = false;
   }
   
-  void mostra(){
+  public void mostra(){
       System.out.println("Nome: "+this.nome);
       System.out.println("Departamento: "+this.departamento);
       System.out.println("RG: "+this.rg);
@@ -38,6 +38,45 @@ public class Funcionario {
       
       System.out.println("Data formatada: "+this.dataEntrada.formatada());
   }
-  
-  
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public Data getDataEntrada() {
+        return dataEntrada;
+    }
+
+    public void setDataEntrada(Data dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
 }
