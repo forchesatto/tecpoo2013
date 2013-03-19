@@ -109,5 +109,33 @@ public class Conta {
     public void setLimite(Double limite) {
         this.limite = limite;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 61 * hash + (this.numero != null ? this.numero.hashCode() : 0);
+        hash = 61 * hash + (this.agencia != null ? this.agencia.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Conta other = (Conta) obj;
+        if (this.numero != other.numero && (this.numero == null || !this.numero.equals(other.numero))) {
+            return false;
+        }
+        if ((this.agencia == null) ? (other.agencia != null) : !this.agencia.equals(other.agencia)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
 }
