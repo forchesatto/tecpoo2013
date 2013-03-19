@@ -9,8 +9,11 @@ import java.util.Date;
 public class ExemploConta {
 
     public static void main(String[] args) {
+        Cliente cliAndre = new Cliente("André", "99988");
+        Agencia ageXanxere = new Agencia("Xanxerê", "987-c");
+        
         Conta conta = new Conta(123456, 
-                "Xanxerê", "André", 
+                ageXanxere, cliAndre, 
                 new Date(), 1000.0); //Construtor com atributos
         
         conta.deposita(100.00);
@@ -31,9 +34,12 @@ public class ExemploConta {
         System.out.println(conta.getCliente() +" - "+conta.getNumero());
         System.out.println("Saldo conta:"+conta.verificaSaldo());
         
+        Cliente cliPedro = new Cliente("Pedro", "65988");
+        Agencia ageXaxim = new Agencia("Xaxim", "982-c");
+        
         Conta conta2 = new Conta(); //Usando construtor vazio
-        conta2.setCliente("Pedro");
-        conta2.setAgencia("Xaxim");
+        conta2.setCliente(cliPedro);
+        conta2.setAgencia(ageXaxim);
         conta2.setNumero(1256);
         conta2.setLimite(1200.0);
         
@@ -44,11 +50,8 @@ public class ExemploConta {
         
         System.out.println(conta2.getNumero()+"Saldo: "+conta2.verificaSaldo());
         
-        Cliente cliente = new Cliente();
-        cliente.nome="José";
-        cliente.cpf="888899999";
-        cliente.cidade="Xanxerê";
+        Cliente cliente = new Cliente("José", "888899999");
         
-        System.out.println(cliente.nome +" - "+cliente.cpf);
+        System.out.println(cliente.getNome() +" - "+cliente.getCpf());
     }
 }

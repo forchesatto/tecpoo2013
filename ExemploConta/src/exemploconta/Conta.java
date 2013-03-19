@@ -8,8 +8,8 @@ import java.util.Date;
  */
 public class Conta {
     private Integer numero;
-    private String agencia;
-    private String cliente;
+    private Agencia agencia;
+    private Cliente cliente;
     private Date dataAbertura;
     private Double limite = 0.0;
     private Double saldo = 0.0;
@@ -20,8 +20,8 @@ public class Conta {
     }
     
     //Construtor com atributos
-    public Conta(Integer numero, String agencia, 
-            String cliente, Date dataAbertura, Double limite) {
+    public Conta(Integer numero, Agencia agencia, 
+            Cliente cliente, Date dataAbertura, Double limite) {
         this.setNumero(numero);
         this.agencia = agencia;
         this.cliente = cliente;
@@ -78,19 +78,19 @@ public class Conta {
         }
     }
 
-    public String getAgencia() {
+    public Agencia getAgencia() {
         return agencia;
     }
 
-    public void setAgencia(String agencia) {
+    public void setAgencia(Agencia agencia) {
         this.agencia = agencia;
     }
 
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(String cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
