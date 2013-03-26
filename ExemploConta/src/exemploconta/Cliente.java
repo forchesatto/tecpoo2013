@@ -1,5 +1,8 @@
 package exemploconta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author andreforchesatto
  */
@@ -7,6 +10,8 @@ public class Cliente {
 
     private String nome;
     private String cpf;
+    
+    private List<Conta> contas;
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
@@ -16,6 +21,20 @@ public class Cliente {
     public Cliente() {
         
     }
+    
+    public void addConta(Conta conta){
+        if(contas == null){
+            contas = new ArrayList();
+        }
+        contas.add(conta);
+    }
+    
+    public void removeConta(Conta conta){
+        if(contas != null){
+            contas.remove(conta);
+        }
+    }
+    
     
     public String getNome() {
         return nome;
@@ -32,7 +51,13 @@ public class Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    
-    
+
+    public List<Conta> getContas() {
+        return contas;
+    }
+
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
+    }
     
 }
