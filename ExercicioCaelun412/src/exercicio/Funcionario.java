@@ -7,7 +7,7 @@ package exercicio;
 public class Funcionario {
     
   private String nome;
-  private String departamento;
+  private Departamento departamento; //tem um departamento
   private double salario;
   private Data dataEntrada;
   private String rg;
@@ -47,11 +47,11 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public String getDepartamento() {
+    public Departamento getDepartamento() {
         return departamento;
     }
 
-    public void setDepartamento(String departamento) {
+    public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
 
