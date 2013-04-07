@@ -26,7 +26,14 @@ public class PedidoTeste {
         cliente.addPedido(pedido);
         cliente.addPedido(pedido1);
         
+        MaiorEMenorItem maiorMenor = new MaiorEMenorItem(pedido.getItens());
+        ItemPedido maior = maiorMenor.getItemMaior();
+        ItemPedido menor = maiorMenor.getItemMenor();
+        
         System.out.println("Total do pedido: "+pedido.getTotalPedido());
         System.out.println("Total do pedido do cliente: "+cliente.getTotalDePedidos());
+        
+        System.out.println("Maior item pedido 1: "+maior.getProduto().getNome()+" valor "+maior.getTotalItem());
+        System.out.println("Menor item pedido 1: "+menor.getProduto().getNome()+" valor "+menor.getTotalItem());
     }
 }
