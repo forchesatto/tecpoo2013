@@ -23,6 +23,8 @@ public class PedidoTeste {
         Pedido pedido1 = new Pedido(new Date(), 2, cliente);
         pedido1.addItem(item3);
         
+        item3.setQtdPedido(30.0);
+        
         cliente.addPedido(pedido);
         cliente.addPedido(pedido1);
         

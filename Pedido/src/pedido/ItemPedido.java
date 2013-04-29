@@ -8,11 +8,10 @@ package pedido;
  *
  * @author andreforchesatto
  */
-public class ItemPedido {
+public class ItemPedido implements Cloneable{
 
     private Double qtdPedido;
     private Double vlrUnitario;
-    private Pedido pedido;
     private Produto produto;
 
     public ItemPedido(Double qtdPedido, Double vlrUnitario, Produto produto) {
@@ -32,14 +31,6 @@ public class ItemPedido {
         return 0.0;
     }
     
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
-    }
-
     public Double getQtdPedido() {
         return qtdPedido;
     }
@@ -63,4 +54,11 @@ public class ItemPedido {
     public void setProduto(Produto produto) {
         this.produto = produto;
     }
+
+    @Override
+    public Object clone(){
+        return new ItemPedido(qtdPedido, vlrUnitario, produto);
+    }
+    
+    
 }

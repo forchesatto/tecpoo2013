@@ -43,8 +43,7 @@ public class Pedido {
         if(itens == null){
             itens = new ArrayList<ItemPedido>();
         }
-        item.setPedido(this);
-        itens.add(item);
+        itens.add((ItemPedido)item.clone());
     }
 
     public Cliente getCliente() {
