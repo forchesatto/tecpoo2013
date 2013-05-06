@@ -1,5 +1,8 @@
 package model;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     
@@ -24,6 +27,11 @@ public class Main {
         conta2.deposita(100.0);
         conta2.saca(110.0);
         System.out.println("Saldo conta 2: "+conta2.verificaSaldo());
+        
+        List<Conta> contas = Arrays.asList(conta1,conta2);
+        Banco banco = new Banco();
+        Double saldoTotal = banco.calculaSaldoBanco(contas);
+        System.out.println("Total geral do banco "+saldoTotal);
         
     }
 }
