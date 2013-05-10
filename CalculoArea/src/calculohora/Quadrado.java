@@ -1,0 +1,23 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package calculohora;
+
+/**
+ *
+ * @author andreluizforchesatto
+ */
+public class Quadrado implements AreaCalculavel {
+
+    private int lado;
+
+    public Quadrado(int lado) {
+        this.lado = lado;
+    }
+
+    @Override
+    public double calculaArea() {
+        return this.lado * this.lado;
+    }
+}
