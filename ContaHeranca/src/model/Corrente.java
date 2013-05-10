@@ -6,7 +6,7 @@ package model;
  *
  * @author andreluizforchesatto
  */
-public class Corrente extends Conta {
+public class Corrente extends Conta implements Tributavel{
 
     private Double limite = 0.0;
 
@@ -25,6 +25,11 @@ public class Corrente extends Conta {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public double calculaTributos() {
+        return this.verificaSaldo() * 0.01;
     }
 
     
